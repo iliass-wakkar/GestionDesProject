@@ -1,0 +1,51 @@
+.OfferCardComponentClass {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  cursor: pointer;
+
+
+ 
+
+
+
+  &>img {
+    width: 90%;
+    @media(max-width:942px){
+     align-self:center;
+    }
+    
+  }
+
+  &>.cardDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media(max-width:942px){
+    padding-left: 45px;
+     }
+     
+ 
+     color: var(--blackColor);
+    &>.hotelName {
+      text-transform: capitalize;
+      font-size: var(--fontSizeH3);
+
+
+    }
+    
+    &>p {
+      color: var(--paragraphColor);
+      font-size: 1.07rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &>span.previousPrice {
+        text-decoration: line-through;
+      }
+    }
+
+  }
+
+}

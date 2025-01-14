@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input, select, textarea {
+    border: none;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    @media(max-width:992px) {
+        font-size: 14px;
+    }
+
+    @media(max-width:768px) {
+        font-size: 13px;
+    }
+}
+
+body {
+    color: var(--blackColor);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    .App {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: var(--backgroundLightColor)
+    }
+
+    .PageComponentClass {
+        margin-top: 106px;
+        min-height: calc(100vh - 156px);
+    }
+
+   
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.secondaryTitle,
+.sectionTitle {
+    font-weight: 600;
+    margin: 30px 0 15px 0;
+    text-transform: capitalize;
+    color: var(--blackColor);
+}
+
+.sectionTitle {
+
+
+    font-size: var(--fontSizeH0);
+}
+
+.secondaryTitle {
+    font-size: 2.5em;
+    font-size: var(--fontSizeH1);
+}
+
+/* change to color of the date inputs : placeholder */
+.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+    color: var(--lightBlackColor) !important;
+}
+
+/* change the color of the label of inputs :  */
+.css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
+    color: var(--lightBlackColor) !important;
+}
+
+/* change the color the border of inputs  */
+.css-1ll44ll-MuiOutlinedInput-notchedOutline {
+    border-color: var(--veryLightBlackColor) !important;
+}
+
+.themeToggleLoginPage {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+}
+
+.hiddenVisibility {
+    visibility: hidden;
+
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacingSmall);
+
+
+    >.inputLabel {
+        font-size: var(--fontSizeMedium);
+        color: var(--darkGrayColor);
+    }
+
+
+
+}   .inputField {
+
+    font-size: var(--fontSizSmall);
+    padding: var(--paddingLarge);
+    border: 1px solid var(--borderColor);
+    border-radius: var(--borderRadiusMedium);
+
+    &.selectInput {
+        color: var(--paragraphColor);
+        
+    }
+}

@@ -1,0 +1,550 @@
+.OffersDetailsComponentClass {
+    color: var(--blackColor);
+
+    background-color: var(--whiteColor);
+
+    img {
+        width: 100%;
+    }
+
+    >.OffersDetailsComponentClassContainer {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        /* media query */
+        @media (max-width : 768px) {
+            padding-top: 10px;
+        }
+
+        &>.searchBox {
+
+            /* media query */
+            @media (max-width : 768px) {
+                display: none;
+            }
+        }
+
+        &>.sectionsOptionsContainer {
+            width: 100%;
+            padding: 0px 15px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            border-radius: var(--borderRadiusSmall);
+
+            &>ul.optionsList {
+                display: flex;
+                padding: 0 20px;
+                gap: 20px;
+                flex-grow: 1;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                border-bottom: 1px solid var(--lightDarkGrayColor);
+
+                &>li {
+                    max-width: 300px;
+                    flex-grow: 1;
+                    padding: 40px 20px;
+                    border-bottom: 4px solid transparent;
+                    cursor: pointer;
+
+                    &.currentSection {
+                        border-bottom-color: var(--primaryColor);
+                    }
+
+                    &:hover:not(.currentSection) {
+                        background-color: var(--lightDarkGrayColor);
+                    }
+
+                    &>a {
+                        padding: 10px;
+                        user-select: none;
+                        color: var(--blackColor);
+                        text-align: center;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+
+
+            }
+
+            /* media query */
+            @media(max-width :768px) {
+                display: none;
+            }
+        }
+
+        >.section {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        >.mainSection {
+
+            &>.header {
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+
+                &>.leftSide {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    &>.reviewContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        &>img.statImg {
+                            width: 120px;
+                        }
+
+                        &>a.newToMrBookingLink {
+                            padding: 10px 15px;
+                            background-color: var(--primaryColor);
+                            color: white;
+                            border-radius: var(--borderRadiusMedium);
+                            font-weight: 600;
+                        }
+
+                    }
+
+                    &>.offerTitle {
+
+                        margin-top: 10px;
+                        font-size: var(--fontSizeH1);
+                    }
+
+                    &>.offerLocation {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        &>.locationIcon {
+                            color: var(--primaryColor);
+                        }
+                    }
+
+
+                }
+
+                &>.rightSide {
+                    display: flex;
+                    gap: 20px;
+                    align-items: start;
+
+
+                    &>.contentContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        &>.price {
+                            color: var(--primaryDarkColor);
+
+                        }
+
+                        /* media query */
+                        @media(max-width :768px) {
+                            flex-wrap: wrap;
+                        }
+                    }
+
+                }
+
+                /* media query */
+                @media(max-width :1200px) {
+                    flex-direction: column-reverse;
+                    gap: 50px;
+                }
+
+            }
+
+            &>.main {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                flex-grow: 1;
+
+                &>.mainImgContainer {
+                    display: flex;
+                    gap: 20px;
+
+                    &>.leftSide {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        /* media query */
+                        @media (max-width : 992px) {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                &>.imgScrollerParent {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &>.rightArrowContainer,
+                    &>.leftArrowContainer {
+                        &>.arrowIcon {
+                            font-size: 40px;
+                            color: var(--primaryDarkColor);
+                            cursor: pointer;
+
+                        }
+
+                    }
+
+                    &>.imgScrollerContainer {
+                        display: flex;
+                        gap: 15px;
+                        max-width: 69vw;
+                        overflow-x: auto;
+                        scrollbar-width: none;
+                        justify-content: center;
+
+
+                        &>img {
+                            cursor: pointer;
+                            width: 150px;
+                            padding: 3px;
+
+                            &.currentImg {
+                                border: 4px solid var(--darkGrayColor);
+                            }
+
+                            /* media query */
+                            @media (max-width : 768px) {
+                                width: 80px;
+                            }
+
+                            /* media query */
+                            @media (max-width : 552px) {
+                                width: 70px;
+                            }
+                        }
+
+                    }
+
+                }
+
+
+
+
+
+            }
+
+        }
+
+        >.offerInfoFacilities {
+            &>.facilitiesContainer {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            &>.InfoContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                &>.offerDescriptionParent {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    &>.offerDescriptionContainer {
+                        border-top: 3px solid var(--primaryLightColor);
+                        padding-top: 30px;
+                        color: var(--paragraphColor);
+                    }
+                }
+
+                &>.hotelInfoParent {
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    &>.hotelInfoContainer {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        &>.profileContainer {
+                            display: flex;
+                            align-items: center;
+                            border-top: 3px solid var(--primaryLightColor);
+                            padding: 20px 0;
+                            padding-top: 30px;
+                            gap: 20px;
+
+                            &>img {
+                                width: 100px;
+                                border-radius: 50%;
+                                cursor: pointer;
+
+                            }
+
+                            &>.infoContainer {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                            }
+                        }
+
+                        &>.mostPopularFacilitiesParent {
+
+                            display: grid;
+                            grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+                            /* media query */
+                            @media (max-width : 992px) {
+                                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+
+        >.guestReviews {
+            >.header {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                flex-wrap: wrap;
+
+                >.headerInfo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+
+                    >.reviewsSome {
+                        display: flex;
+                        gap: 12px;
+                        align-items: center;
+
+                        >.averageRating {
+                            background-color: var(--primaryColor);
+                            padding: var(--paddingSmall);
+                            border-radius: var(--borderRadiusSmall);
+                            color: white;
+
+                        }
+
+                        h3 {
+                            >span {
+                                color: var(--paragraphColor);
+                            }
+                        }
+
+
+
+                    }
+
+
+                }
+
+
+            }
+
+
+            >.reviewStatistics {
+                display: flex;
+                flex-direction: column;
+
+                gap: 20px;
+
+                >.StatisticsContainer {
+
+
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(400px, auto));
+                    gap: 30px;
+                    row-gap: 40px;
+                    justify-content: center;
+
+
+                    /* media query */
+                    @media (max-width:1400px) {
+
+                        grid-template-columns: repeat(2, minmax(400px,1fr));
+                    }
+                    @media (max-width:992px) {
+
+                        grid-template-columns: 1fr;
+                    }
+
+                }
+
+            }
+
+            >.guestReviewsCardParent {
+                margin-top: 60px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                >.guestReviewsCardContainer {
+
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(350px, auto  ));
+                    gap: 30px;
+                    row-gap: 40px;
+                    justify-content: center;
+                    @media (max-width:400px) {
+
+                        grid-template-columns: 1fr;
+                    }
+
+                }
+
+                >.readMoreReviewsBtn {
+                    margin-top: 40px;
+                    align-self: flex-end;
+                }
+
+            }
+
+
+        }
+        >.offerAvailability {
+
+            display: flex;
+            justify-content: center;
+
+          
+
+           
+          
+            > .availabilityContainer {
+              
+              display: flex;
+              flex-direction: column;
+            
+            
+
+              gap: var(--spacingMedium);
+              padding: var(--paddingMedium) var(--paddingExtraLarge);
+
+              @media(max-width:768px){
+                padding: var(--paddingMedium);
+              }
+          
+          
+              > .availabilityHeader {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                @media(max-width:768px){
+                    display: none;
+
+                }
+                padding: var(--paddingMedium) 0;
+                border-bottom: 2px solid var(--borderColor);
+          
+                > .headerLabel {
+                  font-size: var(--fontSizeMedium);
+                  color: var(--darkGrayColor);
+                  font-weight: bold;
+                  &:not(:first-child){
+                    text-align: center;
+                  }
+                }
+              }
+          
+              > .availabilityList {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacingLarge);
+ 
+          
+                > .availabilityItem {
+                    
+                    
+                  display: grid;
+                  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+                  @media(max-width:768px){
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: var(--spacingLarge);
+
+                }
+               
+
+                  align-items: center;
+                  padding: var(--paddingMedium);
+                  border: 1px solid var(--borderColor);
+                  border-radius: var(--borderRadiusMedium);
+                  >div:not(:first-child){
+                    text-align: center;
+                  }
+          
+                  > .roomType {
+                    > .roomName {
+                      font-size: var(--fontSizeMedium);
+                      color: var(--darkGrayColor);
+                      font-weight: bold;
+                      margin-bottom: var(--spacingSmall);
+                    }
+          
+                    > .roomDescription {
+                      font-size: var(--fontSizeSmall);
+                      color: var(--paragraphColor);
+                    }
+                  }
+          
+                  > .travelersInfo {
+                    > .travelersCount {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      gap: var(--spacingSmall);
+          
+                      
+                    }
+                  }
+          
+                  > .priceInfo {
+                    > .price {
+                      font-size: var(--fontSizeMedium);
+                      color: var(--primaryColor);
+                      font-weight: bold;
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+
+
+
+    }
+
+
+
+
+
+
+}

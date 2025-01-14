@@ -1,0 +1,41 @@
+.taskCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid var(--lightDarkGrayColor);
+    border-radius: var(--borderRadiusMedium);
+    background-color: var(--backgroundLightColor);
+  @media (max-width : 768px){
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: var(--spacingLarge);
+
+  }
+    
+    > .taskInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      > .memberInfo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        > img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+  
+    > .taskActions {
+      display: flex;
+      gap: 10px;
+    }
+
+
+
+  }

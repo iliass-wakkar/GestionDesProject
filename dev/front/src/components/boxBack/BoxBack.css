@@ -1,0 +1,9 @@
+.BoxBackComponentClass {
+  
+    border-radius: var(--borderRadiusMedium) var(--borderRadiusMedium) 0 0;
+    width: 100%;
+    /* * height not works  */
+    padding-top: 80px;
+    background: linear-gradient(to right, var(--lightPrimaryColor), var(--veryLightPrimaryColor) 55%);
+
+}
