@@ -1,5 +1,6 @@
-// local storage handler : -----
+import { useNavigate } from "react-router-dom";
 
+// local storage handler : -----
 export function getTokenLs() {
 	return localStorage.getItem("token");
 }
@@ -11,6 +12,7 @@ export function getUserProfileImgLs() {
 }
 export function setUserLs(token, profileImg) {
 	localStorage.setItem("token", token);
+    if(!profileImg) profileImg=""; 
 	localStorage.setItem("profileImg", profileImg);
 }
 
@@ -23,6 +25,8 @@ export function getUserLs() {
 export function dropUserLs() {
 	localStorage.removeItem("token");
 	localStorage.removeItem("profileImg");
+
+  
 }
 
 export function IsLoginLs() {

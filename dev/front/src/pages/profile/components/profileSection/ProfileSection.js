@@ -73,10 +73,6 @@ export default function ProfileSection() {
 					submit
 				</Button>
 			</div>
-			<div className="emailSection">
-				<h2>My email Address</h2>
-				<InfoCardBox title="User@gmail.com" description="" />
-			</div>
 		</div>
 	);
 }

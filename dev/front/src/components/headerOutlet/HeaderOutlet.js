@@ -5,7 +5,7 @@ import ThemeToggle from "../themeToggle/ToggleTheme";
 import HeaderProfile from "../headerProfile/HeaderProfile";
 
 // External imports:
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Button, Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -20,10 +20,14 @@ export default function HeaderOutlet({ customClass, profileImg = getUserProfileI
 
 	const [loginStat, setLoginStat] = useState(IsLoginLs());
 	const [otherLinksShowStat, setOtherLinksShow] = useState(false);
+  let  navigator = useNavigate(); 
 
 	function logOut() {
 		setLoginStat(false);
+    
     dropUserLs(); 
+
+    navigator("/");; 
 	}
 
 	const toggleDrawer = () => {
@@ -66,7 +70,7 @@ export default function HeaderOutlet({ customClass, profileImg = getUserProfileI
 				<nav className="desktopNav">
 					<ul className="pagesList">
 						<li>
-							<Link to="/TasksManagement">TasksManagement</Link>
+							<Link to="/TasksManagement">Gestion des Taches</Link>
 						</li>
 					
 						<li onMouseEnter={handleMouseEnterOtherLinks}>
@@ -114,7 +118,7 @@ export default function HeaderOutlet({ customClass, profileImg = getUserProfileI
 						<ul className="pagesList">
 							<li>
 								<Link to="/" onClick={toggleDrawer}>
-								Tasks Management
+								Gestion des Taches
 								</Link>
 							</li>
 					

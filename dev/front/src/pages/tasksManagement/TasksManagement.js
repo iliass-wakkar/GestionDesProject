@@ -101,9 +101,9 @@ export default function TasksManagement() {
 		<main className="PageComponentClass TasksManagementComponentClass">
 			<Container maxWidth="xl" className="TasksManagementComponentClassContainer">
 				<div className="header">
-					<h1 className="pageTitle">Tasks Management</h1>
+					<h1 className="pageTitle">Gestion des Taches</h1>
 					<Button variant="contained" startIcon={<AddIcon />} onClick={() => handleOpenDialog()}>
-						Add Task
+						Ajouter une Tache
 					</Button>
 				</div>
 
@@ -120,7 +120,7 @@ export default function TasksManagement() {
 
 				{/* Dialog for adding/editing a task */}
 				<Dialog open={openDialog} onClose={handleCloseDialog}>
-					<DialogTitle>{currentTask ? "Edit Task" : "Add Task"}</DialogTitle>
+					<DialogTitle>{currentTask ? "Modifier une Tache" : "Ajouter une Tache"}</DialogTitle>
 					<DialogContent>
 						<TaskForm task={currentTask} onSave={handleSaveTask} onCancel={handleCloseDialog} />
 					</DialogContent>
