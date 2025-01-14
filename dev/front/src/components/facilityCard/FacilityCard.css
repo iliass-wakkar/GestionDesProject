@@ -1,0 +1,22 @@
+.facilityCardComponentClass,
+.PopularFacilityCardComponentClass {
+/*  */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--paddingExtraLarge) 20px;
+
+    &>svg {
+        color: var(--primaryColor);
+    }
+    &>.facilityDescription{
+        color: var(--paragraphColor);
+    }
+}
+.facilityCardComponentClass {
+    box-shadow: var(--boxShadowLight);
+    border-radius: var(--borderRadiusMedium);
+    border: 1px solid var(--lightDarkGrayColor);
+  
+}
+

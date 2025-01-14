@@ -1,0 +1,151 @@
+.HeaderOutletComponentClass {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+
+    z-index: 100;
+
+
+    background-color: var(--whiteColor);
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--paddingSmall) var(--spacingMedium);
+    box-shadow: var(--boxShadowLight);
+
+    &>.logoContainer {
+
+        &>a {
+            >img {
+                width: 90px;
+                cursor: pointer;
+
+            }
+        }
+    }
+
+    &>nav.desktopNav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-right: 20px;
+
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+
+    .mobileMenu {
+        display: none;
+
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        .menuIcon {
+            color: var(--blackColor);
+        }
+    }
+
+}
+
+.drawerBox,
+nav.desktopNav {
+    >.drawerHeader {
+        .closeIcon {
+            color: var(--blackColor);
+        }
+    }
+
+    ul.pagesList {
+        padding: var(--paddingSmall);
+        display: flex;
+        gap: 20px;
+
+        &>li {
+
+
+            &>a {
+                font-size: var(--fontSizeBase);
+                color: var(--blackColor);
+                text-transform: capitalize;
+                position: relative;
+                font-weight: 600;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -8px;
+                    width: 100%;
+                    height: 2px;
+                    width: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    transition: 0.3s;
+                    background-color: var(--primaryColor);
+                }
+
+                &:hover {
+                    color: var(--primaryColor);
+                }
+
+                &>.currentPage::before,
+                &:not(.currentPage):hover::before {
+                    width: 100%;
+                }
+
+            }
+
+
+
+
+        }
+
+    }
+}
+
+.drawerBox div.controlButtons,
+nav.desktopNav div.controlButtons {
+    display: flex;
+    gap: 20px;
+
+    align-items: center;
+
+    button {
+        padding: var(--paddingSmall);
+        text-transform: capitalize;
+        border-radius: var(--borderRadiusSmall);
+    }
+
+
+}
+
+.drawerBox {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+
+    .drawerHeader {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &>ul.pagesList {
+        flex-direction: column;
+        text-align: center;
+
+
+        &>li {
+            padding: 10px 20px;
+        }
+    }
+
+    &>div.controlButtons {
+        flex-direction: column;
+    }
+}

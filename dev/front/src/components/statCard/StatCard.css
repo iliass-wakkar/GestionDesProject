@@ -1,0 +1,56 @@
+.StatCardComponentClass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+    
+
+    &>.StatInfo {
+        display: flex;
+        justify-content: space-between;
+
+        &>.categoryContainer {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &>.reviewIcon {
+                font-size: 20px;
+            }
+
+        }
+    }
+/*  */
+    &>.progressDiv {
+        height: 10px;
+        width: 100%;
+
+        position: relative;
+        border-radius: var(--borderRadiusMedium);
+
+        &.positive {
+            background-color: var(--primaryColor);
+        }
+        &.semiPositive{
+        background-color: var(--primaryLightColor);    
+        }
+
+        &.negative {
+            background-color: var(--warningColor);
+        }
+
+        &::before{
+            content: attr(review);
+            position: absolute;
+            right: 0px;
+            font-size: 1em;
+            top: -22px;
+          
+           
+
+        }
+
+    }
+
+
+}

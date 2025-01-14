@@ -1,0 +1,25 @@
+.billInfoComponentClass {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacingMedium);
+    gap: var(--spacingPage);
+
+    @media(max-width:768px){
+        gap: var(--spacingMedium);
+        flex-wrap: wrap;
+     
+      }
+
+  
+    > .label {
+      font-size: var(--fontSizeMedium);
+      color: var(--darkGrayColor);
+      font-weight: bold;
+      width: 200px;
+    }
+  
+    > .value {
+      font-size: var(--fontSizeMedium);
+      color: var(--paragraphColor);
+    }
+  }

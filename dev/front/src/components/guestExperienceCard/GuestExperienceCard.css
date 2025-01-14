@@ -1,0 +1,43 @@
+.GuestExperiencesCardComponentClass {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px;
+    border: 1px solid var(--lightDarkGrayColor);
+  
+  
+    &>.experience {
+        margin-top: 10px;
+
+    }
+/*  */
+    &>.clientProfile {
+        display: flex;
+        gap: 20px;
+
+        &>.leftSide {
+
+            img {
+                cursor: pointer;
+                border-radius: 50%;
+                overflow: hidden;
+                width: 65px;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        .rightSide {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &>.description{ 
+             color: var(--paragraphColor);
+             font-weight: normal;
+            }
+        }
+    }
+
+
+}
