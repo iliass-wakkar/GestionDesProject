@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.Execution;
 using GestionDesProjectBackEnd.Models;
 using GestionDesProjectBackEnd.Models.Dtos;
 
@@ -10,7 +11,11 @@ public class AutoMapperProfile : Profile
     {
         
         CreateMap<UsersDto, AppUsers>();
+        // Map Tasks to TasksDto
+        CreateMap<TasksDto, Tasks>();
 
+        // Map Member to MemberDto
+        CreateMap<Members, MemberDto>();
 
 
     }

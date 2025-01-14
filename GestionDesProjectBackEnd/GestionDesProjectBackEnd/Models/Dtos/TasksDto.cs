@@ -20,5 +20,8 @@ namespace GestionDesProjectBackEnd.Models.Dtos
         [Required(ErrorMessage = "Member ID is required.")]
         public int? IdMembers { get; set; }
 
+        // Include Member data
+        public MemberDto? Member { get; set; }
+
     }
 }

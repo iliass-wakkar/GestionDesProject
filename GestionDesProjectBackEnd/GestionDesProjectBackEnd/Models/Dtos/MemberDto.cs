@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace GestionDesProjectBackEnd.Models
+namespace GestionDesProjectBackEnd.Models.Dtos
 {
-    public partial class Members : AppUsers
+    public class MemberDto
     {
         [Required(ErrorMessage = "Username is required.")]
         [StringLength(50, ErrorMessage = "Username cannot exceed 50 characters.")]
@@ -24,10 +22,5 @@ namespace GestionDesProjectBackEnd.Models
         public string? PhoneNumber { get; set; }
 
         public int? EquipeId { get; set; }
-
-        public virtual Equipe? Equipe { get; set; }
-
-        [JsonIgnore]
-        public virtual ICollection<Tasks> Tasks { get; set; } = new List<Tasks>();
     }
 }

@@ -24,6 +24,6 @@ namespace GestionDesProjectBackEnd.Models
         [Required(ErrorMessage = "Member ID is required.")]
         public int? IdMembers { get; set; }
 
-        public virtual Members? IdMembersNavigation { get; set; }
+        public Members? Member { get; set; }
     }
 }
