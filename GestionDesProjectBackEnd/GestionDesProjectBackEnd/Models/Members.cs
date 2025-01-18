@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace GestionDesProjectBackEnd.Models
 {
@@ -26,6 +27,7 @@ namespace GestionDesProjectBackEnd.Models
 
         public virtual Equipe? Equipe { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Tasks> Tasks { get; set; } = new List<Tasks>();
     }
 }

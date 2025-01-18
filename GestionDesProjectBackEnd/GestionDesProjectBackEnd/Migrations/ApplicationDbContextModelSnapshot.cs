@@ -199,14 +199,14 @@ namespace GestionDesProjectBackEnd.Migrations
 
             modelBuilder.Entity("GestionDesProjectBackEnd.Models.Tasks", b =>
                 {
-                    b.HasOne("GestionDesProjectBackEnd.Models.Members", "IdMembersNavigation")
+                    b.HasOne("GestionDesProjectBackEnd.Models.Members", "Member")
                         .WithMany("Tasks")
                         .HasForeignKey("IdMembers")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Tasks_Members");
 
-                    b.Navigation("IdMembersNavigation");
+                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("GestionDesProjectBackEnd.Models.Members", b =>

@@ -12,7 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestionDesProjectBackEnd.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
+<<<<<<<< HEAD:GestionDesProjectBackEnd/GestionDesProjectBackEnd/Migrations/20250114192831_Mig-v1.0.Designer.cs
     [Migration("20250114192831_Mig-v1.0")]
+========
+    [Migration("20250114221527_Mig-v1.0")]
+>>>>>>>> 9c98224bbd3f8cddf9077d399755d52861ccc4a8:GestionDesProjectBackEnd/GestionDesProjectBackEnd/Migrations/20250114221527_Mig-v1.0.Designer.cs
     partial class Migv10
     {
         /// <inheritdoc />
@@ -202,14 +206,14 @@ namespace GestionDesProjectBackEnd.Migrations
 
             modelBuilder.Entity("GestionDesProjectBackEnd.Models.Tasks", b =>
                 {
-                    b.HasOne("GestionDesProjectBackEnd.Models.Members", "IdMembersNavigation")
+                    b.HasOne("GestionDesProjectBackEnd.Models.Members", "Member")
                         .WithMany("Tasks")
                         .HasForeignKey("IdMembers")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Tasks_Members");
 
-                    b.Navigation("IdMembersNavigation");
+                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("GestionDesProjectBackEnd.Models.Members", b =>

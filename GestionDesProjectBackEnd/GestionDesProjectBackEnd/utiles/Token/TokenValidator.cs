@@ -19,7 +19,7 @@ namespace GestionDesProjectBackEnd.Token
             // Extract token claims
             var userIdFromToken = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var userEmailFromToken = user.FindFirst(ClaimTypes.Email)?.Value;
-            var type = user.FindFirst("Type")?.Value;
+            var type = user.FindFirst("type")?.Value;
 
             // Validate token claims
             if (string.IsNullOrEmpty(userIdFromToken) ||

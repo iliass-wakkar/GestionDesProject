@@ -52,6 +52,7 @@ namespace GestionDesProjectBackEnd
             // Add Authorization
             builder.Services.AddAuthorization();
 
+<<<<<<< HEAD
             // Add Controllers and configure JSON options
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>
@@ -61,10 +62,28 @@ namespace GestionDesProjectBackEnd
                 });
 
             // Add Dynamique Url
+=======
+            // Add Validator
+            builder.Services.AddScoped<TokenValidator>();
+
+            // Add Controllers
+            builder.Services.AddControllers();
+
+            // Add Dynamic URL
+>>>>>>> 9c98224bbd3f8cddf9077d399755d52861ccc4a8
             builder.Services.AddHttpContextAccessor();
 
-            // Token generator utility
-            builder.Services.AddScoped<TokenValidator>();
+            // Add CORS policy to allow all origins
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
 
             // Add CORS policy to allow all origins
             builder.Services.AddCors(options =>
@@ -119,6 +138,9 @@ namespace GestionDesProjectBackEnd
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            // Use CORS policy
+            app.UseCors("AllowAllOrigins");
+
 
             app.UseHttpsRedirection();
 
@@ -128,6 +150,7 @@ namespace GestionDesProjectBackEnd
             // Enable Authentication and Authorization
             app.UseAuthentication();
             app.UseAuthorization();
+
 
             // Map Controllers
             app.MapControllers();

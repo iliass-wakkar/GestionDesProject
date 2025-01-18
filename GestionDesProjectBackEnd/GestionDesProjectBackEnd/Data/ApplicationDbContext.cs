@@ -77,7 +77,7 @@ namespace GestionDesProjectBackEnd.Data
                 entity.Property(e => e.Name).HasMaxLength(100);
 
                 // Relationship with Members
-                entity.HasOne(d => d.IdMembersNavigation)
+                entity.HasOne(d => d.Member)
                       .WithMany(p => p.Tasks)
                       .HasForeignKey(d => d.IdMembers)
                       .HasConstraintName("FK_Tasks_Members");
