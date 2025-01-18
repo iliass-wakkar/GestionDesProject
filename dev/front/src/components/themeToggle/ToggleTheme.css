@@ -1,0 +1,13 @@
+.switchThemeContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+/*  */
+    &>.icon {
+        font-size: 32px;
+        color: var(--primaryColor);
+
+
+    }
+}

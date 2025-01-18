@@ -1,0 +1,48 @@
+.ProfileSectionComponentClass {
+    width: 100%;
+
+    >.profileContainer{
+
+        display: flex;
+        justify-content: space-between;
+        gap: var(--spacingMedium);
+        align-items: center;
+        flex-wrap: wrap-reverse;
+
+    }
+
+
+    >.formContainer {
+        width: 100%;
+        padding: var(--paddingLarge);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacingMedium);
+
+        >.inputsContainer {
+            display: grid;
+            column-gap: var(--spacingMedium);
+            row-gap: var(--spacingXLarge);
+
+            grid-template-columns: repeat(2, minmax(400px, 1fr));
+
+            @media(max-width:1200px) {
+                grid-template-columns: repeat(auto-fit,100%);
+            }
+
+            
+        }
+
+        >.submitButton {
+            text-transform: capitalize;
+            padding: var(--paddingVerySmall) var(--paddingExtraLarge);
+            font-weight: normal;
+            align-self: flex-end;
+        }
+
+
+    }
+
+
+
+}

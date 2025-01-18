@@ -1,0 +1,73 @@
+.InfoCardBoxComponentClass {
+    display: flex;
+    gap: var(--spacingMedium);
+    padding: var(--paddingLarge) 0;
+    align-items: center;
+    flex-wrap: wrap;
+
+    >.imgContainer {
+        padding: var(--paddingMedium);
+        background-color: rgba(var(--primaryLightColorRGB), 0.2);
+        border-radius: 50%;
+
+        >.icon {
+            --imgSize: 26px;
+            
+            
+
+            &.iconIcon {
+                font-size: var(--imgSize);
+            }
+
+            &.iconImg {
+
+                width: var(--imgSize);
+            }
+
+        }
+
+    }
+
+    >.informationContainer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacingVerySmall);
+
+        >.description {
+
+            color: var(--lightParagraphColor);
+        }
+
+    }
+
+    &.ProfileSectionLargePhotoComponentClass {
+
+        >.imgContainer {
+
+            border-radius: var(--borderRadiusMedium);
+            background-color: transparent;
+            padding: 0;
+            
+
+            >.icon {
+                &.iconImg {
+                    border-radius: inherit;
+                    width: 240px;
+                }
+
+            }
+        }
+
+        >.informationContainer {
+
+            >.title {
+                font-size: var(--fontSizeH2);
+            }
+
+            >.description {
+                font-size: var(--fontSizeVeryLarge);
+            }
+
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.SearchBoxComponentClass {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    gap: var(--spacingSmall);
+    padding: var(--paddingExtraLarge) var(--paddingLarge);
+    border: 1px solid var(--primaryColor);
+    box-shadow: var(--boxShadowMedium);
+    width: 85%;
+    border-radius: var(--borderRadiusMedium);
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+
+
+    justify-content: space-between;
+
+
+    &.OfferDetailsPage {
+        border: none;
+        width: 90%;
+        box-shadow: none;
+
+    }
+
+    &>.Box {
+        display: flex;
+        align-items: center;
+
+        &:not(.searchBox) {
+            gap: var(--spacingSmall);
+        }
+
+        &.personBox {
+            width: 140px;
+        }
+
+        &.searchBox {
+            cursor: pointer;
+            padding: 10px 20px;
+            width: 170px;
+
+            background-color: var(--primaryColor);
+
+            display: flex;
+            border-radius: var(--borderRadiusExtraLarge);
+
+            h3 {
+
+
+                color: white;
+                font-weight: normal;
+            }
+            img{
+                width: 50px;
+            }
+
+            /* remove the fieldset {border} */
+            .MuiOutlinedInput-notchedOutline {
+                display: none;
+            }
+        }
+
+        /* @media  Box */
+        @media (max-width :992px) {
+            &:not(.searchBox) {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+
+            }
+        }
+
+    }
+
+    /* @media  SearchBoxComponentClass */
+    @media (max-width :1400px) {
+        width: 100%;
+    }
+
+    @media (max-width :992px) {
+
+        flex-direction: column;
+        align-items: stretch;
+
+
+    }
+
+}

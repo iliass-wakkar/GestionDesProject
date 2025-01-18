@@ -1,0 +1,86 @@
+.SideBarMenuItemComponentClass {
+
+
+    padding: var(--paddingLarge) var(--paddingMedium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    --imgWidth: 25px;
+    transition: var(--transitionDuration) var(--transitionEase);
+
+    &.current,
+    &:hover {
+        background-color: var(--veryLightPrimaryColorV1);
+    }
+
+
+
+    >.icon {
+        cursor: pointer;
+
+
+        &:hover+.titleContainer {
+
+            opacity: 100%;
+
+        }
+
+        &.iconComponent {
+            font-size: var(--imgWidth);
+            color: var(--primaryColor);
+
+
+        }
+
+        &.iconImg {
+            width: var(--imgWidth);
+
+        }
+    }
+
+
+    >.titleContainer {
+        position: absolute;
+
+        right: 0;
+        width: 200px;
+        padding: 0 var(--paddingMedium);
+
+        opacity: 0;
+
+        transform: translateX(100%);
+
+        height: 100%;
+        background: rgba(var(--primaryColorRGB), 0.5);
+        display: flex;
+        border-radius: 0 var(--borderRadiusVerySmall) var(--borderRadiusVerySmall) 0;
+        align-items: center;
+        transition: var(--transitionDuration) var(--transitionEase);
+
+        >.title {
+            color: white;
+            font-weight: bold;
+            font-size: var(--fontSizeMedium);
+
+
+        }
+
+    }
+
+}
+
+.SideBarMenuItemProfilePageComponentClass {
+    >.titleContainer {
+        background: rgba(var(--primaryColorRGB), 0.65);
+
+        >.title {
+            /* color: white; */
+
+
+
+        }
+
+    }
+}

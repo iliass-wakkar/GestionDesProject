@@ -1,0 +1,39 @@
+.GuestReviewCardComponentClass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    max-width: 100%;
+    border-radius: var(--borderRadiusMedium);
+    padding: var(--paddingMedium);
+
+    border: 1px solid var(--primaryLightColor);
+    box-shadow: var(--boxShadowLight);
+
+    >.profileContainer {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        >.imgContainer {
+            >img {
+                width: 55px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    >.descriptionContainer {
+        padding: var(--paddingMedium) var(--paddingSmall);
+
+        >.description {
+            color: var(--paragraphColor);
+        }
+
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+
+}

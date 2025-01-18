@@ -1,0 +1,48 @@
+.SelectFilterBoxComponentClass {
+    position: relative;
+    width: 100%;
+
+    >.downIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        font-size: 28px;
+        /* font-weight: 100; */
+        pointer-events: none;
+        color: var(--lightParagraphColor);
+
+    }
+
+    >select {
+        width: 100%;
+        padding-right: 50px;
+        /* Removes the default dropdown arrow */
+        appearance: none;
+        /* Safari compatibility */
+        -webkit-appearance: none;
+        /* Firefox compatibility */
+        -moz-appearance: none;
+
+
+
+        font-size: var(--fontSizSmall);
+        padding: var(--paddingLarge);
+        border: 1px solid var(--borderColor);
+        border-radius: var(--borderRadiusMedium);
+
+
+
+        color: var(--lightParagraphColor);
+    }
+}
+
+.selectFilterBoxAuthComponentClass {
+    margin-bottom: 10px;
+
+    >select {
+        background-color: var(--whiteColor);
+        font-size: var(--fontSizeLarge);
+        border-bottom: 2px solid var(--lightColor);
+    }
+}

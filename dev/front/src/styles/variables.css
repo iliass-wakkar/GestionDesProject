@@ -1,0 +1,85 @@
+/* variables.css */
+
+/* Colors */
+:root {
+  --primaryColor: #2d5c8d; /* Primary brand color (blue) */
+  --primaryColorRGB: 45, 92, 141; /* Primary brand color (blue) */
+  --primaryDarkColor: #1e3a5c; /* Darker shade of primary */
+  --primaryLightColor: #b4c8d2; /* Lighter shade of primary */
+  --primaryLightColorRGB: 180, 200, 210; /* Lighter shade of primary */
+
+  --lightPrimaryColor: #568eae; /* Light blue */
+  --veryLightPrimaryColor: #8faebf; /* Very light blue */
+
+  --veryLightPrimaryColorV1: #eaeaea; /* Neutral light color */
+  --backgroundLightColor: #f8f8f8; /* Light background */
+  --accentRedColor: #FF5A5F; /* Accent red for errors or attention */
+  --darkGrayColor: #333333; /* Dark gray for text or backgrounds */
+  --lightDarkGrayColor: #eeeeee9a; /* Light gray with transparency for borders */
+  --whiteColor: #FFFFFF; /* White */
+  --lightColor: #f5f5f5; /* Light white */
+  --blackColor: #000000; /* Black */
+  --lightBlackColor: #000000d3; /* Semi-transparent black */
+  --veryLightBlackColor: #0000007f; /* For input borders */
+  --warningColor: #FFC107; /* Warning (yellow-like tone) */
+  --paragraphColor: #626161; /* Paragraph text color */
+  --paragraphColorRGB: 98, 97, 97; /* Paragraph text color */
+  --lightParagraphColor: #757575; /* Light paragraph text color */
+}
+
+/* Font Sizes */
+:root {
+  --fontSizeSmall: 0.875rem; /* Small text */
+  --fontSizeBase: 1rem; /* Base text */
+  --fontSizeMedium: 1.1rem; /* Medium text */
+  --fontSizeLarge: 1.25rem; /* Large text */
+  --fontSizeVeryLarge: 1.30rem; /* Very large text */
+  --fontSizeH0: 2.5rem; /* Heading 0 */
+  --fontSizeH1: 2rem; /* Heading 1 */
+  --fontSizeH2: 1.75rem; /* Heading 2 */
+  --fontSizeH3: 1.5rem; /* Heading 3 */
+}
+
+/* Spacing */
+:root {
+  --spacingVerySmall: 6px;
+  --spacingSmall: 10px;
+  --spacingMedium: 16px;
+  --spacingLarge: 24px;
+  --spacingXLarge: 32px;
+  --spacingPage: 40px;
+  --spacingXPage: 52px;
+}
+
+/* Border Radius */
+:root {
+  --borderRadiusVerySmall: 2px;
+  --borderRadiusSmall: 4px;
+  --borderRadiusMedium: 8px;
+  --borderRadiusLarge: 12px;
+  --borderRadiusExtraLarge: 30px;
+}
+
+/* Padding */
+:root {
+  --paddingVerySmall: 6px;
+  --paddingSmall: 10px;
+  --paddingMedium: 15px;
+  --paddingLarge: 20px;
+  --paddingExtraLarge: 30px;
+  --paddingPage: 40px;
+  --paddingMediumPage: 50px;
+}
+
+/* Shadows */
+:root {
+  --boxShadowLight: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --boxShadowMedium: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Transition */
+:root {
+  --transitionDuration: 0.2s;
+  --transitionDurationSmall: 0s;
+  --transitionEase: ease-in-out;
+}

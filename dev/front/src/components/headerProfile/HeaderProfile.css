@@ -1,0 +1,15 @@
+.HeaderProfileClassName {
+
+    >a {
+        >img {
+            cursor: pointer;
+            padding: var(--paddingVerySmall);
+            border: 2px solid var(--primaryColor);
+
+
+            width: 60px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
+    }
+}

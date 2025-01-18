@@ -1,0 +1,92 @@
+.Header2OutletContentComponentClass{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.Header2OutletComponentClass {
+  
+    display: flex;
+    gap: var(--spacingXLarge);
+    align-items: center;
+    padding: var(--paddingMedium) var(--paddingSmall);
+    flex-wrap: wrap;
+    
+
+
+    margin-bottom: var(--marginLarge);
+
+    >.leftSide {
+        display: flex;
+        gap: var(--spacingXLarge);
+        align-items: flex-end;
+
+        margin-bottom: var(--marginLarge);
+
+
+        >.logoContainer {
+            >a{
+            >img {
+                width: 110px;
+            }
+        }
+        }
+
+        >.headerTitleContainer {
+            /* align the text with the site logo */
+            padding-bottom: 15px;
+
+            >.headerTitle {
+            
+            
+
+                font-weight: bold;
+                text-align: center;
+
+                align-self: stretch;
+                @media(max-width:767px){
+                    display: none;
+                }
+
+            }
+        }
+
+    }
+
+    >.rightSide {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+     
+
+        gap: var(--spacingXLarge);
+
+
+        >.profileNotificationContainer {
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--spacingLarge);
+            align-items: center;
+
+            >.notificationIcon {
+                font-size: 28px;
+                color: var(--primaryColor);
+
+            }
+
+            >.profileContainer {
+               >a{
+                >img {
+                    --size: 65px;
+                    width: var(--size);
+                    height: var(--size);
+
+                    border-radius: var(--borderRadiusMedium);
+                }
+            }
+            }
+
+        }
+    }
+
+}
