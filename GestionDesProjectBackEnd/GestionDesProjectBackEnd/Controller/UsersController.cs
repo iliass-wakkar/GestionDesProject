@@ -39,7 +39,7 @@ namespace GestionDesProjectBackEnd.Controller
 
                 if (user == null || !AppUsers.VerifyPassword(userDto.Password, user.Password))
                 {
-                    return Unauthorized("Invalid email or password!");
+                    return Unauthorized(new { message = "Invalid email or password!" });
                 }
 
                 // Fetch user-specific data based on the user type
@@ -82,8 +82,10 @@ namespace GestionDesProjectBackEnd.Controller
             }
             catch (Exception e)
             {
-                return StatusCode(500, "Internal server error\n" + e.Message);
+                return StatusCode(500, new { message = "Internal server error", error = e.Message });
             }
         }
+    
+    
     }
 }

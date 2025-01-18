@@ -5,7 +5,7 @@ import ThemeToggle from "../themeToggle/ToggleTheme";
 import HeaderProfile from "../headerProfile/HeaderProfile";
 
 // External imports:
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Button, Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -20,10 +20,14 @@ export default function HeaderOutlet({ customClass, profileImg = getUserProfileI
 
 	const [loginStat, setLoginStat] = useState(IsLoginLs());
 	const [otherLinksShowStat, setOtherLinksShow] = useState(false);
+  let navigator = useNavigate(); 
 
 	function logOut() {
 		setLoginStat(false);
     dropUserLs(); 
+    navigator("/"); 
+    
+
 	}
 
 	const toggleDrawer = () => {

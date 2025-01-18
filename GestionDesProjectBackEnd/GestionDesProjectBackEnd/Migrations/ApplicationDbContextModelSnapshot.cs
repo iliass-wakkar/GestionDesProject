@@ -40,6 +40,9 @@ namespace GestionDesProjectBackEnd.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("Profile")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasMaxLength(50)

@@ -24,8 +24,7 @@ export default function TaskForm({ task, onSave, onCancel }) {
   // List of members for the dropdown
   const members = [
     { name: "Zineb", profileImg: Profile1Img },
-    { name: "Amine", profileImg: Profile2Img },
-    { name: "Ayoub", profileImg: ProfileImg },
+   
   ];
 
   const handleChange = (e) => {

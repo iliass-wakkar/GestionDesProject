@@ -7,11 +7,11 @@ import userProfile from "../../../../assets/imgs/profile.png";
 
 export default function ProfileSection() {
 	const [formData, setFormData] = useState({
-		firstName: "Salma",
-		lastName: "",
-		gender: "",
-		phoneNumber: "",
-		language: "",
+		firstName: "Zineb",
+		lastName: "dg",
+		gender: "M",
+		phoneNumber: "2342223",
+		language: "Fr",
 	});
 
 	const [isEditMode, setIsEditMode] = useState(false);

@@ -52,14 +52,31 @@ namespace GestionDesProjectBackEnd
             // Add Authorization
             builder.Services.AddAuthorization();
 
-            // Add Controllers
-            builder.Services.AddControllers();
+            // Add Controllers and configure JSON options
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNamingPolicy = null; // Preserve property names as-is
+                    options.JsonSerializerOptions.WriteIndented = true; // Pretty-print JSON for readability
+                });
 
-            //Add Dynamique Url
+            // Add Dynamique Url
             builder.Services.AddHttpContextAccessor();
 
             // Token generator utility
             builder.Services.AddScoped<TokenValidator>();
+
+            // Add CORS policy to allow all origins
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -98,11 +115,15 @@ namespace GestionDesProjectBackEnd
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
+
+            // Use CORS policy
+            app.UseCors("AllowAllOrigins");
 
             // Enable Authentication and Authorization
             app.UseAuthentication();

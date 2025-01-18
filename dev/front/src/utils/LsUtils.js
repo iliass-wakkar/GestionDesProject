@@ -1,30 +1,45 @@
-// local storage handler : -----
-
 export function getTokenLs() {
 	return localStorage.getItem("token");
 }
+
 export function setTokenLs(token) {
-	return localStorage.setItem("token", token);
-}
-export function getUserProfileImgLs() {
-	return localStorage.getItem("profileImg");
-}
-export function setUserLs(token, profileImg) {
 	localStorage.setItem("token", token);
-	localStorage.setItem("profileImg", profileImg);
 }
 
 export function getUserLs() {
-	return {
-		token: getTokenLs(),
-		profileImg: getUserProfileImgLs(),
-	};
+	try {
+		const userJson = localStorage.getItem("user");
+		return userJson ? JSON.parse(userJson) : null;
+	} catch (e) {
+		dropUserLs();
+
+		return {};
+	}
 }
+
+export function setUserLs(data) {
+	localStorage.setItem("user", JSON.stringify(data.user));
+
+	localStorage.setItem("token", data.token);
+}
+
+export function getUserProfileImgLs() {
+	const user = getUserLs();
+	return user ? user.profile : null;
+}
+
 export function dropUserLs() {
 	localStorage.removeItem("token");
-	localStorage.removeItem("profileImg");
+	localStorage.removeItem("user");
 }
 
 export function IsLoginLs() {
-	return Boolean(localStorage.getItem("token"));
+	return Boolean(getTokenLs() && getUserLs());
 }
+export function isAdmin() {
+	const user = getUserLs();
+	console.log(user?.type === "Admin");
+	return user && user.type === "Admin";
+}
+
+isAdmin();

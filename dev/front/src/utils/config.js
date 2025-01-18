@@ -1,1 +1,1 @@
-export let baseUrl="https://localhost:7015/api";
+export let baseUrl="https://localhost:7110/api";
